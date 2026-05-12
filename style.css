@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none; 
+    list-style: none; 
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #1a0035;
+    color: #fffae4;
+}
+
+header{
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.content{
+    background-color: #29025367;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+#rodape {
+    background-color: #0e001c;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
