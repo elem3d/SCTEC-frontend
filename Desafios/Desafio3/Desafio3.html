@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Desafio 3</title>
+    <script src="./script3.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Calculadora de Desconto </h1>
+    </header>
+    <main>
+        <label for="valorProduto">Insira o preço do produto</label>
+        <input type="text" name="valorProduto" id="valorProduto">
+        <label for="desconto">Insira a porcentagem do desconto</label>
+        <input type="number" name="desconto" id="desconto">
+        <button id="calcular" onclick="calcularDesconto()">Calcular Preço</button>
+        <p id="resultado"></p>
+
+    </main>
     
 </body>
 </html>
