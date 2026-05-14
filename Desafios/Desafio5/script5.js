@@ -72,21 +72,29 @@ const listaCarros = [carro1, carro2, carro3, carro4, carro5, carro6, carro7, car
 
 function exibirCarro(carro) {
     const div = document.getElementById("verCarros");
-    div.innerHTML += "<p>" + carro +"</p>"; // Limpa o conteúdo da div antes de exibir os carros
+    let textoCarro = carro.marca + " " + carro.modelo + " (" + carro.ano + ") - Cor: " + carro.cor;
+    div.innerHTML += "<p>" + textoCarro +"</p>"
+};
+
+
+
+function iniciarLoop() {
+    let i = 0;
+    do {
+       let carro = listaCarros[i]
+       const div = document.getElementById("verCarros");
+        let textoCarro = carro.marca + " " + carro. modelo + " (" + carro.ano + ") - Cor: " + carro.cor;
+        
+        if(confirm("Carro nº " + i + " " + textoCarro + "\n\nDeseja ver o próximo carro?") === false) {
+            i++
+            break
+        }
+        else{
+            
+            div.innerHTML += "<p>" + textoCarro +"</p>";
+        }
+
+        i++
+    }
+    while (i < listaCarros.length);
 }
-
-
-function mostrarProximo(){
-    let proximo = true;
-    return proximo;
-    proximo = false;
-}
-
-console.log(mostrarProximo());
-
-do {
-        i = 0;
-        exibirCarro(listaCarros[i]);
-        i++;
-        proximo = false
-    } while (i<listaCarros.length);
