@@ -47,9 +47,8 @@ function tratarClique(evento){
     else{
         evento.target.textContent= vezDoX ? "X" : "O";
         vezDoX = !vezDoX;
-        verificarVencedor();
     }
-    
+    verificarVencedor();  
 }
 
 iniciarJogo();
