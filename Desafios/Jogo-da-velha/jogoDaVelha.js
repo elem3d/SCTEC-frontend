@@ -40,10 +40,17 @@ function verificarVencedor(){
     return false;
 }
 
+function verificarEmpate(){
+    if([...celulas].every(celula => celula.textContent !== "")){
+        setTimeout(() => alert("Empate!"), 10);
+        return true;
+;    }
+};
+
 function tratarClique(evento){
     if(jogoAcabou === true){
         return;
-    }
+    };
 
     evento.target.textContent= vezDoX ? "X" : "O";
     verificarVencedor();
@@ -51,10 +58,14 @@ function tratarClique(evento){
     if(verificarVencedor()){
         jogoAcabou = true;
         return;
+    }
+    else if(verificarEmpate()){
+        jogoAcabou = true;
+        return;
     };
 
     vezDoX = !vezDoX; 
-}
+};
 
 iniciarJogo();
 
