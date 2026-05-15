@@ -1,0 +1,39 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.celula {
+    color: black;
+    width: 100px;
+    height: 100px;
+    background-color: #c8c8c8;
+    border: #c8c8c8 solid 3px;
+    border-style:outset ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 46px;
+    cursor: pointer;
+}
+
+.celula:active{
+    border-style: inset;
+}
+
+#reiniciar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
