@@ -28,6 +28,7 @@ const MENU_PIZZAS = Object.freeze({
         precos:{
             broto: 20.00,
             media: 35.00,
+            grande: 70.00
         }
     },
 }
@@ -46,5 +47,6 @@ function calcularPreco(sabor, tamanho){
 document.getElementById('enviar').addEventListener('click', () => {
     const sabor = numeroPedido.value;
     const tamanho = tamanhoPizza.value;
-    document.getElementById('resultado').innerHTML = "Você pediu uma pizza " + tamanho + " de " + MENU_PIZZAS[sabor].nome + "! O valor dela é de: " + calcularPreco(sabor,tamanho)
+
+    document.getElementById('resultado').innerHTML = "Você pediu uma pizza " + tamanho + " de " + MENU_PIZZAS[sabor].nome + "! O valor dela é de: " + "R$" + calcularPreco(sabor,tamanho)
 });
