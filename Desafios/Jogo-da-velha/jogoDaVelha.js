@@ -1,6 +1,7 @@
 const celulas = document.querySelectorAll('.celula');
 
 let vezDoX = true;
+let jogoAcabou = false;
 
 const combinacoesVencedoras = [
     [0, 1, 2], // Linha de cima
@@ -31,23 +32,27 @@ function verificarVencedor(){
         const pos3 = celulas[combinacao[2]].textContent;
 
         if(pos1 !== "" && pos1 === pos2 && pos1 === pos3){
-            alert(`O jogador ${pos1} venceu!`);
+            setTimeout(() => alert(`O jogador ${pos1} venceu!`), 10);
             return true;
         }
-
-        return false;
     }
+    return false;
 }
 
 function tratarClique(evento){
-    verificarVencedor();
-    if(verificarVencedor()){
+    if(jogoAcabou === true){
         return;
     }
-    else{
-        evento.target.textContent= vezDoX ? "X" : "O";
-        vezDoX = !vezDoX;
-    } 
+
+    evento.target.textContent= vezDoX ? "X" : "O";
+    verificarVencedor();
+    
+    if(verificarVencedor()){
+        jogoAcabou = true;
+        return;
+    };
+
+    vezDoX = !vezDoX; 
 }
 
 iniciarJogo();
