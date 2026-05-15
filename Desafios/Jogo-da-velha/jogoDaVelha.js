@@ -17,6 +17,7 @@ const combinacoesVencedoras = [
 document.getElementById('reiniciar').addEventListener('click', iniciarJogo);
 
 function iniciarJogo(){
+    jogoAcabou = false;
     celulas.forEach(celula => {
         celula.textContent = "";
         celula.addEventListener('click', tratarClique, {once: true});
