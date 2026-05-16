@@ -1,29 +1,39 @@
+body {
+    background-color: blueviolet;
+}
+
 section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50%;
+    margin: 15vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 30px;
 }
 
 .tabuleiro {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-top: 20px;
+    width: 90%;
+    max-width: 320px;
 }
 
 .celula {
     color: black;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    aspect-ratio: 1/1;
     background-color: #c8c8c8;
     border: #c8c8c8 solid 3px;
     border-style:outset ;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 46px;
+    font-size: 40px;
     cursor: pointer;
 }
 
