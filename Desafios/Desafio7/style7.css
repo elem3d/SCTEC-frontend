@@ -1,0 +1,112 @@
+/* Configurações Gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.listaContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContainer{
+    display: flex;
+}
+
+h1 {
+    font-size: 26px;
+    color: #1e293b;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Descrição orientando o usuário */
+label[for="newItem"] {
+    display: block;
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Campo de Texto (Input) */
+#newItem {
+    width: 65%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#newItem:focus {
+    border-color: #6366f1;
+}
+
+/* Botão Adicionar */
+#newItemButton {
+    width: 32%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 3%;
+    box-sizing: border-box;
+}
+
+#newItemButton:hover {
+    background-color: #4f46e5;
+}
+
+/* Lista de Tarefas (ul) */
+#lista {
+    display: block;
+    padding: 5%;
+    width: 50%;
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+/* Cada Tarefa (li) */
+#lista li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: white;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Estilo das Caixinhas (Checkbox) */
+#lista input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #6366f1;
+}
+
+/* Texto da Tarefa (label) */
+#lista label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.concluida {
+    text-decoration: line-through;
+    color: #94a3b8; 
+}
